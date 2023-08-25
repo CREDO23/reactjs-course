@@ -1,0 +1,60 @@
+/* Fonts */
+@font-face {
+  font-family: "Satisfy";
+  src: url("./fonts//satisfy//f.ttf");
+}
+
+/* ========================
+Variables
+======================== */
+:root {
+  /* Colors */
+  --primary-color: #72a411;
+  --clr-black: #333333;
+  --clr-black-1: #555555;
+  ---clr-black-2: #999999;
+  --clr-gray: #f6f6f6;
+  ---clr-gray-1: #eeeeee;
+  --clr-white: #ffffff;
+
+  /* Fonts Families */
+  --primary-ff: Verdana, Geneva, Tahoma, sans-serif;
+  --satisfy-ff: "Satisfy";
+
+  /* Border Radius */
+  --s-radius: 6px;
+  --m-radius: 12px;
+  --l-radius: 22px;
+}
+
+/* ========================
+Defaut Styles
+======================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--primary-ff);
+  background-color: var(--clr-white);
+}
+p {
+  color: var(---clr-black-2);
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color);
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
