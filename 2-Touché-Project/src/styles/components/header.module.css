@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: space-around;
   padding: 1rem 4rem;
-  background-color: transparent
+  background-color: transparent;
+  overflow: hidden;
 }
 
 .logo {
