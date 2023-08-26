@@ -1,16 +1,16 @@
-import Header from "./header";
 import styles from "../styles/components/hero.module.css";
 
 export default function Hero() {
   return (
-    <div className={styles["hero"]}>
-      <Header />
+    <div id="intro" className={styles["hero"]}>
       <div className={styles["intro"]}>
         <div className={styles["tag-line-container"]}>
           <span className={styles["brand"]}>Touché</span>
           <span className={styles["tag-line"]}>Restaurant / Coffee / Pub</span>
         </div>
-        <button className="btn btn-primary">Discover Story</button>
+        <a href="#about">
+          <button className="btn btn-primary">Discover Story</button>
+        </a>
       </div>
     </div>
   );

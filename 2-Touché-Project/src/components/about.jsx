@@ -3,9 +3,9 @@ import about from "../assets/images/about.jpg";
 
 export default function About() {
   return (
-    <section className={styles["about"]}>
+    <section id="about" className={styles["about"]}>
       <div className={styles["about-img"]}>
-        <img src={about} alt="" />
+        <img src={about} alt="about-us" />
       </div>
       <div className={styles["about-text-container"]}>
         <div className={styles["our-restaurant"]}>

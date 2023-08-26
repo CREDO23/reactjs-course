@@ -9,7 +9,7 @@ export const menus = [
   },
   {
     title: "Gallery",
-    link: "#home",
+    link: "#gallery",
   },
   {
     title: "Chefs",

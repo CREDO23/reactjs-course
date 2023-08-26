@@ -5,6 +5,12 @@
   background-image: url("../../assets/images/intro.jpg");
 }
 
+@media screen and (max-width:760px){
+.hero {
+    height: calc(100vh - 8rem);
+}
+}
+
 .hero::after {
   content: "";
   width: 100%;
@@ -27,9 +33,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  top: 8rem;
 }
 
-.intro button {
+.intro a  {
   z-index: 10;
   margin: 4rem 0;
 }

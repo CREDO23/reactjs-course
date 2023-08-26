@@ -4,7 +4,7 @@ import { dishes } from "../data/gallery/dishes";
 
 export default function Gallery() {
   return (
-    <section className={styles["gallery"]}>
+    <section id="gallery" className={styles["gallery"]}>
       <ul className={styles["categories"]}>
         {categories.map((category) => (
           <li key={category}>
@@ -15,9 +15,9 @@ export default function Gallery() {
         ))}
       </ul>
       <ul className={styles["dishes"]}>
-        {dishes.map((dish) => {
+        {dishes.map((dish,key) => {
           return (
-            <li key={dish.name}>
+            <li key={key}>
               <div className="dish  framed">
                 <div className="dish-title">
                   <p>{dish.name}</p>

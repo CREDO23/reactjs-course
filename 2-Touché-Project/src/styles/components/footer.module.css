@@ -17,7 +17,7 @@
   padding: 4rem 10rem;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 760px) {
   .footer .information {
     padding: 2rem 1rem;
     gap: 4rem;
@@ -61,4 +61,9 @@
 .social-medias a img {
   width: 2rem;
   height: 2rem;
+}
+
+.social-medias p {
+    font-family: "Poppin-thin";
+    font-size: .8rem;
 }
