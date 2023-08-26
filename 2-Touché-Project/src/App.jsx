@@ -1,11 +1,9 @@
-import small from "./assets/images/09-small.jpg";
-import chef from "./assets/images/02.jpg";
-import Header from "./components/header";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Menu from "./components/menu";
 import Gallery from "./components/galley";
 import Team from "./components/team";
+import Footer from "./components/footer";
 
 export default function App() {
   return (
@@ -31,6 +29,7 @@ export default function App() {
         <h3>Want to make a reservation ?</h3>
         <p>Call 1-887-654-3210</p>
       </div>
+      <Footer/>
     </main>
   );
 }
