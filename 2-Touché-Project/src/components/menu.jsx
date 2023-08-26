@@ -3,15 +3,15 @@ import { menus } from "../data/menus/index";
 
 export default function Menu() {
   return (
-    <section className={styles["menu"]}>
-      {menus.map((menu) => {
+    <section id="menus" className={styles["menu"]}>
+      {menus.map((menu,key) => {
         return (
-          <div key={menu.title} className="menu">
+          <div key={key} className="menu">
             <h4 className="menu-title">{menu.title}</h4>
             <ul className="items">
-              {menu.items.map((item) => {
+              {menu.items.map((item,key) => {
                 return (
-                  <li key={item.name} className="menu-item">
+                  <li key={key} className="menu-item">
                     <div className="item-info">
                       <span className="title">{item.name}</span>
                       <span className="price">${item.price}</span>

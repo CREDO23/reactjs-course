@@ -3,10 +3,10 @@ import { chefs } from "../data/team";
 
 export default function Team() {
   return (
-    <section className={styles["chefs"]}>
+    <section id="chefs" className={styles["chefs"]}>
       {chefs.map((chef) => {
         return (
-          <div className="chef-card">
+          <div key={chef.name} className="chef-card">
             <div className="chef-image">
               <img src={chef.image} alt={chef.name} />
             </div>

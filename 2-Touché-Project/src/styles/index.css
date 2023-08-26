@@ -119,7 +119,7 @@ section {
   padding: 3rem 2rem;
   overflow: hidden;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 760px) {
   h1 {
     font-size: 4rem;
   }
@@ -149,6 +149,13 @@ section {
 
 /* ======== Global classes ======== */
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
 .btn {
   padding: 0.4rem 2rem;
   margin: 0.5rem;
@@ -178,7 +185,7 @@ section {
 .reservation-section {
   width: 100%;
   height: 18rem;
-  background-color: black;
+  background-color: var(--clr-black);
   color: white;
   display: flex;
   align-items: center;
@@ -204,7 +211,7 @@ section {
 
 .title-section p {
   font-size: 1.3rem;
-  color: var(--clr-black-1);
+  color: var(---clr-black-2);
 }
 .reservation-section p {
   font-size: 1.5rem;

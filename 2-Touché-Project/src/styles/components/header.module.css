@@ -6,6 +6,10 @@
   padding: 1rem 4rem;
   background-color: transparent;
   overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: rgba(82, 82, 82, 1);
+  z-index: 20;
 }
 
 .logo {
@@ -30,4 +34,35 @@
 
 .navigation-item a:hover {
   color: var(--primary-color);
+}
+
+/* Hamburger  */
+
+.hamburger {
+  z-index: 10;
+  cursor: pointer;
+
+  display: none;
+}
+
+.hamburger-line {
+  width: 2.5rem;
+  height: 0.25rem;
+  background: var(--primary-color);
+  margin: 8px auto;
+  border-radius: 0.25rem;
+}
+
+@media screen and (max-width: 760px) {
+  .navigation {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+  .header {
+    justify-content: space-between;
+    padding: 1rem 1rem;
+  }
 }
