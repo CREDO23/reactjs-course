@@ -28,7 +28,7 @@
 
 :root {
   /* Colors */
-  --primary-color: #72a411;
+  --primary-color: #8eb640;
   --clr-black: #333333;
   --clr-black-1: #555555;
   ---clr-black-2: #999999;
@@ -142,16 +142,10 @@ section {
     line-height: 1;
   }
 
-  section{
-    padding: 6rem 14rem;
+  section {
+    padding: 8rem 14rem;
   }
 }
-
-
-
-
-
-
 
 /* ======== Global classes ======== */
 
@@ -180,7 +174,8 @@ section {
   background-color: #65920b;
 }
 
-.title-section{
+.title-section,
+.reservation-section {
   width: 100%;
   height: 18rem;
   background-color: black;
@@ -193,7 +188,12 @@ section {
   text-align: center;
 }
 
-.title-section h3 {
+.reservation-section {
+  background-color: var(--primary-color);
+}
+
+.title-section h3,
+.reservation-section h3 {
   text-align: center;
   font-size: xx-large;
   font-weight: 500;
@@ -202,9 +202,12 @@ section {
   color: var(--clr-white);
 }
 
-.title-section p{
+.title-section p {
   font-size: 1.3rem;
   color: var(--clr-black-1);
+}
+.reservation-section p {
+  font-size: 1.5rem;
 }
 
 .title-section h3::after,
@@ -251,7 +254,7 @@ section {
   flex-direction: column;
   align-items: center;
   color: #555555;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .menu-item > .item-info {
@@ -269,18 +272,17 @@ section {
   color: var(---clr-black-2);
 }
 
-/* Portofolio */
+/* dish */
 
-.portofolio {
+.dish {
   width: 24rem;
   height: 18rem;
   position: relative;
   margin: 0.25rem;
   cursor: pointer;
-  border: solid red 2px;
 }
 
-.portofolio::after {
+.dish::after {
   content: "";
   width: 97%;
   height: 95%;
@@ -293,7 +295,7 @@ section {
   border-radius: var(--s-radius);
 }
 
-.portofolio .portofolio-title {
+.dish .dish-title {
   position: absolute;
   display: flex;
   align-items: center;
@@ -310,24 +312,24 @@ section {
   overflow: hidden;
 }
 
-.portofolio .portofolio-title p {
+.dish .dish-title p {
   position: inherit;
   transition: all 0.2s ease-in-out;
   visibility: hidden;
   bottom: 7rem;
 }
 
-.portofolio:hover .portofolio-title {
+.dish:hover .dish-title {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.portofolio:hover .portofolio-title p {
+.dish:hover .dish-title p {
   bottom: 50%;
   transform: translateY(50%);
   visibility: visible;
 }
 
-.portofolio img {
+.dish img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -350,6 +352,11 @@ section {
   width: 100%;
   height: 32rem;
   position: relative;
+}
+
+.chef-card .chef-image img {
+  width: 100%;
+  height: 100%;
 }
 
 .chef-image::after {
@@ -387,4 +394,3 @@ section {
   color: var(---clr-black-2);
   text-align: center;
 }
-
