@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Menu from "./components/menu";
+import Gallery from "./components/galley";
 
 export default function App() {
   return (
@@ -12,12 +13,7 @@ export default function App() {
         <h3 className="section-title">Section Title</h3>
       </section>
       <button className="btn btn-primary">Envoyer</button>
-      <div className="portofolio  framed">
-        <div className="portofolio-title">
-          <p>Samoussa</p>
-        </div>
-        <img src={small} alt="small9" />
-      </div>
+      
       <div className="chef-card">
         <div className="chef-image">
           <img src={chef} alt="chef" />
@@ -39,6 +35,11 @@ export default function App() {
       <Menu />
       <div className="title-section">
         <h3>Gallery</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+      </div>
+      <Gallery/>
+      <div className="title-section">
+        <h3>Meet our chefs</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
       </div>
     </main>

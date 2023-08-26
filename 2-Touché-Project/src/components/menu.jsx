@@ -6,12 +6,12 @@ export default function Menu() {
     <section className={styles["menu"]}>
       {menus.map((menu) => {
         return (
-          <div className="menu">
+          <div key={menu.title} className="menu">
             <h4 className="menu-title">{menu.title}</h4>
             <ul className="items">
               {menu.items.map((item) => {
                 return (
-                  <li className="menu-item">
+                  <li key={item.name} className="menu-item">
                     <div className="item-info">
                       <span className="title">{item.name}</span>
                       <span className="price">${item.price}</span>
