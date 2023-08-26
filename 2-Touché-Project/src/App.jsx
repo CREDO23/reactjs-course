@@ -1,10 +1,12 @@
 import small from "./assets/images/09-small.jpg";
 import chef from "./assets/images/02.jpg";
+import Header from "./components/header";
+import Hero from "./components/hero";
 
 export default function App() {
   return (
     <main>
-      <section style={{ backgroundColor: "violet" }} className="section">
+      {/* <section style={{ backgroundColor: "violet" }} className="section">
         <h3 className="section-title">Section Title</h3>
       </section>
       <button className="btn btn-primary">Envoyer</button>
@@ -70,7 +72,8 @@ export default function App() {
             dapibus leo nec ornare diam.
           </p>
         </div>
-      </div>
+      </div> */}
+      <Hero/>
     </main>
   );
 }

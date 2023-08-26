@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
   font-family: "Satisfy";
-  src: url("./fonts/satisfy/f.ttf");
+  src: url("./fonts/satisfy/Satisfy-Regular.ttf");
 }
 
 @font-face {
@@ -139,6 +139,7 @@ h4 {
   }
 }
 
+
 /* ======== Global classes ======== */
 
 .center-content {
@@ -256,7 +257,7 @@ h4 {
   position: relative;
   margin: 0.25rem;
   cursor: pointer;
-  /* border: solid red 2px; */
+  border: solid red 2px;
 }
 
 .portofolio::after {
@@ -366,3 +367,4 @@ h4 {
   color: var(---clr-black-2);
   text-align: center;
 }
+
