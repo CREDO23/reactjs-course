@@ -3,6 +3,7 @@ import chef from "./assets/images/02.jpg";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import About from "./components/about";
+import Menu from "./components/menu";
 
 export default function App() {
   return (
@@ -11,51 +12,6 @@ export default function App() {
         <h3 className="section-title">Section Title</h3>
       </section>
       <button className="btn btn-primary">Envoyer</button>
-      <div className="menu">
-        <h4 className="menu-title">Menu</h4>
-        <ul className="items">
-          <li className="menu-item">
-            <div className="item-info">
-              <span className="title">Title</span>
-              <span className="price">$10</span>
-            </div>
-            <p className="item-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-              laborum libero voluptates quia dolor unde adipisci tenetur.
-            </p>
-          </li>
-          <li className="menu-item">
-            <div className="item-info">
-              <span className="title">Title</span>
-              <span className="price">$10</span>
-            </div>
-            <p className="item-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-              laborum libero voluptates quia dolor unde adipisci tenetur.
-            </p>
-          </li>
-          <li className="menu-item">
-            <div className="item-info">
-              <span className="title">Title</span>
-              <span className="price">$10</span>
-            </div>
-            <p className="item-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-              laborum libero voluptates quia dolor unde adipisci tenetur.
-            </p>
-          </li>
-          <li className="menu-item">
-            <div className="item-info">
-              <span className="title">Title</span>
-              <span className="price">$10</span>
-            </div>
-            <p className="item-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-              laborum libero voluptates quia dolor unde adipisci tenetur.
-            </p>
-          </li>
-        </ul>
-      </div>
       <div className="portofolio  framed">
         <div className="portofolio-title">
           <p>Samoussa</p>
@@ -74,8 +30,17 @@ export default function App() {
           </p>
         </div>
       </div> */}
-      <Hero/>
-      <About/>
+      <Hero />
+      <About />
+      <div className="title-section">
+        <h3>Menu</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+      </div>
+      <Menu />
+      <div className="title-section">
+        <h3>Gallery</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+      </div>
     </main>
   );
 }
