@@ -1,7 +1,7 @@
 import { menus } from "../../data/header/menus";
-import styles from "../../styles/components/header.module.css";
+import styles from "../../styles/components/header/index.module.css";
 
-import Hamburger from "./hamurger";
+import Hamburger from "./hamburger";
 export default function Header() {
   return (
     <header className={styles["header"]}>
