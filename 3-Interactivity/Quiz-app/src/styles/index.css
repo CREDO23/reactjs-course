@@ -161,18 +161,22 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
 }
 .btn {
-  padding: 0.4rem 2rem;
-  margin: 0.5rem;
+  padding: 0.3rem 1.2rem;
+  font-size: .85rem;
+  margin: 0.3rem;
   transition: all;
   cursor: pointer;
   display: inline-block;
   text-transform: uppercase;
-  border: transparent 0.25rem solid;
+  border: none;
+  border-radius: .2rem;
+  position: relative;
 }
 
 .btn-secondary {
-  background-color: var(--clr-gray);
+  background-color: var(--clr-white);
   color: var(---clr-black-1);
+  /* border: solid var(--primary-color) 1px; */
 }
 
 .btn-primary {
@@ -182,5 +186,13 @@ body::-webkit-scrollbar-thumb {
 
 .btn:hover {
   color: var(--clr-white);
-  background-color: #376d0563;
+  background-color: #376d05d0;
 }
+
+.btn:disabled{
+  background-color: #DEDEDE;
+  color: rgba(0, 0, 0, 0.466);
+  cursor:not-allowed;
+}
+
+
