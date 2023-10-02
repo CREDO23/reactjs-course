@@ -1,13 +1,13 @@
-export default function Input({ name, error, placeholder, onChange, value }) {
+export default function Input({ label, error, placeholder, onChange, value }) {
   return (
     <div className="input">
-      <label htmlFor={name}>{name}</label>
+      <label htmlFor={label}>{label}</label>
       <input
         value={value}
         onChange={onChange}
         placeholder={placeholder}
         type="text"
-        id={name}
+        id={label}
       />
       {error && <p className="error">{error}</p>}
     </div>

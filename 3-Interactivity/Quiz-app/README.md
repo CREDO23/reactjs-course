@@ -15,7 +15,7 @@
     - Use state to keep track of the current question and the user's score.
     - Display the current question and its choices to the user.
 3. `Home` Component:
-    - Create a `Home` component that displays the welcome message and a form to retrieve user details.
+    - Create a `Home` component that displays the intro message and a form to retrieve user details.
     - Use event handlers to deal with form inputs
     - Update the user information state when typing something into the inputs
 4. `UserDetails` Component:
