@@ -1,8 +1,8 @@
-**Exercise: Building an Interactive Quiz App**
+## **Building an Interactive Quiz App**
 
-**Objective:** Create a dynamic quiz application in React that demonstrates the use of state management, prop passing, event handling, and higher-order components.
+ **Objective:** *Create a dynamic quiz application in React that demonstrates the use of state management, prop passing, event handling, and higher-order components*.
 
-**Instructions:**
+### **Instructions:**
 
 1. Set Up the Project:
     - Create a new React application using `create vite` or your preferred method.
@@ -36,7 +36,7 @@
 8. Styling:
     - Add CSS styles to make your Quiz App visually appealing.
 
-**Bonus Challenges:**
+### **Bonus Challenges:**
 
 1. Add a countdown timer for the entire quiz, not just individual questions.
 2. Implement a review feature that allows users to revisit and change their answers before submitting the quiz.
