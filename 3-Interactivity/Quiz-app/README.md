@@ -8,12 +8,11 @@
     - Create a new React application using `create vite` or your preferred method.
     - Create multiple components: `QuizApp`, `Home`, `UserDetail`, `Question`, and `Result`.
 2. `QuizApp` Component:
-    - Create a `QuizApp` component that manages the quiz state:
+    - Create a standalone `QuizApp` component that manages the quiz state:
         - User information
         - User score
     - Define an array of quiz questions, each containing a question, multiple choices, and the correct answer.
     - Use state to keep track of the current question and the user's score.
-    - Display the current question and its choices to the user.
 3. `Home` Component:
     - Create a `Home` component that displays the intro message and a form to retrieve user details.
     - Use event handlers to deal with form inputs
