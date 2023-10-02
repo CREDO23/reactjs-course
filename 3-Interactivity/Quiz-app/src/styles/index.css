@@ -176,18 +176,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .btn-secondary {
-  background-color: var(--clr-white);
-  color: var(---clr-black-1);
+  background-color: transparent;
+  color: var(--primary-color);
+  border: solid 1px var(--primary-color);
 }
 
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--clr-white);
+  border: solid 1px transparent;
 }
 
 .btn:hover {
   color: var(--clr-white);
   background-color: #376d05d0;
+  border: transparent 1px solid;
 }
 
 .btn:disabled{
@@ -222,4 +225,12 @@ body::-webkit-scrollbar-thumb {
 .input .error{
   font-size: .72rem;
   color: var(--clr-red);
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
