@@ -1,22 +1,37 @@
 import styles from "../../styles/components/question/index.module.css";
 import Button from "../shared/button";
 import Choice from "./choice";
+import { useState } from "react";
 
-export default function Question() {
+export default function Question({ question, options, setCurrentAnswer }) {
+  const [answer, setAnswer] = useState(null);
+
+  const handleCurrentAnswer = () => {
+    setCurrentAnswer(answer);
+  };
+
   return (
     <div className={styles["question"]}>
-      <p>Pourquoi on met le script en bas dans la balyse body?</p>
+      <p>{question}</p>
 
       <div className={styles["choices"]}>
-        <Choice value={"React"} />
-        <Choice value={"Node"} />
-        <Choice value={"Angular"} />
-        <Choice value={"Rust"} />
+        {options.map((option, index) => {
+          return (
+            <Choice
+              key={index}
+              value={option}
+              checked={answer == index}
+              onCheck={() => setAnswer(index)}
+            />
+          );
+        })}
       </div>
 
       <div className={styles["action_buttons"]}>
         <Button type="secondary">Leave</Button>
-        <Button disabled >Next</Button>
+        <Button onClick={handleCurrentAnswer} disabled={answer == null}>
+          Next
+        </Button>
       </div>
     </div>
   );
