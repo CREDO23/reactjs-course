@@ -1,0 +1,13 @@
+.user_details{
+    border: solid 1px rgba(0, 0, 0, 0.089);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: .2rem;
+    min-width: 16rem;
+    gap: .5rem;
+}
+
+.user_details div {
+    font-size: .85rem;
+}
