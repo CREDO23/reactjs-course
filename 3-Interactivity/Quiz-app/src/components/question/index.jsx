@@ -3,16 +3,31 @@ import Button from "../shared/button";
 import Choice from "./choice";
 import { useState } from "react";
 
-export default function Question({ question, options, setCurrentAnswer }) {
-  const [answer, setAnswer] = useState(null);
+export default function Question({
+  question,
+  options,
+  setCurrentAnswer,
+  nextQuestion,
+  questionIndex,
+}) {
+  const [answer, setAnswer] = useState();
 
-  const handleCurrentAnswer = () => {
+  const handleNextQuestion = () => {
+    // Reset state ==> We will learn more in the next article
+    setAnswer(null);
     setCurrentAnswer(answer);
+    if (questionIndex < 15) nextQuestion();
   };
 
   return (
     <div className={styles["question"]}>
-      <p>{question}</p>
+      <p>
+        <span>
+          <b>{questionIndex}</b>
+        </span>
+        <br />
+        {question}
+      </p>
 
       <div className={styles["choices"]}>
         {options.map((option, index) => {
@@ -29,7 +44,7 @@ export default function Question({ question, options, setCurrentAnswer }) {
 
       <div className={styles["action_buttons"]}>
         <Button type="secondary">Leave</Button>
-        <Button onClick={handleCurrentAnswer} disabled={answer == null}>
+        <Button onClick={handleNextQuestion} disabled={answer == null}>
           Next
         </Button>
       </div>
