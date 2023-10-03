@@ -11,7 +11,7 @@
     - Create a standalone `QuizApp` component that manages the quiz state:
         - User information
         - User score
-    - Define an array of quiz questions, each containing a question, multiple choices, and the correct answer.
+    - Define an array of 15 quiz questions, each containing a question, multiple choices, and the correct answer.
     - Use state to keep track of the current question and the user's score.
 3. `Home` Component:
     - Create a `Home` component that displays the intro message and a form to retrieve user details.

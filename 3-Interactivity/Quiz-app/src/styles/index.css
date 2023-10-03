@@ -173,6 +173,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
   border-radius: .2rem;
   position: relative;
+  min-width: 8rem;
 }
 
 .btn-secondary {
