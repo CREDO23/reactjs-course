@@ -9,13 +9,13 @@ export default function Choice({ value, onCheck, checked }) {
 
   return (
     <label
-      htmlFor={value && value.substring(3, 10)}
-      className={styles["label"]}
+      htmlFor={value}
+      className={styles["label_option"]}
     >
       <input
         checked={checked}
         onChange={handleCheck}
-        id={value && value.substring(3, 10)}
+        id={value}
         type="radio"
       />
       <div></div>
