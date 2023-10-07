@@ -1,4 +1,4 @@
-.label {
+.label_option {
   border: solid rgba(0, 0, 0, 0.192) 1px;
   padding: .5rem;
   display: inline-flex;
@@ -8,11 +8,11 @@
   font-size: .85rem;
 }
 
-.label input{
+.label_option input{
     display: none;
 }
 
-.label div {
+.label_option div {
   width: .8rem;
   height: .8rem;
   border-radius: 100%;
@@ -21,11 +21,11 @@
   flex-shrink: 0;
 }
 
-.label input:checked + div {
+.label_option input:checked + div {
 	background-color: var(--primary-color);
 }
 
-.label:focus,
- label:hover {
+.label_option:focus,
+ label_option:hover {
 	border: solid 1px var(---clr-black-2);
 }

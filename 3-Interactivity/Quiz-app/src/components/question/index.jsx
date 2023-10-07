@@ -1,51 +1,59 @@
-import styles from "../../styles/components/question/index.module.css";
-import Button from "../shared/button";
-import Choice from "./choice";
-import { useState } from "react";
+import styles from '../../styles/components/question/index.module.css';
+import Button from '../shared/button';
+import Choice from './choice';
+import { useState } from 'react';
 
 export default function Question({
   question,
   options,
-  setCurrentAnswer,
-  nextQuestion,
   questionIndex,
+  next,
+  setUserChoice,
+  finsish,
 }) {
-  const [answer, setAnswer] = useState();
+  const [choice, setchoice] = useState(null);
 
-  const handleNextQuestion = () => {
-    // Reset state ==> We will learn more in the next article
-    setAnswer(null);
-    setCurrentAnswer(answer);
-    if (questionIndex < 15) nextQuestion();
+  const handleNext = () => {
+    setUserChoice(choice);
+    setchoice(null); // reset the choice, we will learn more in the next post #4
+    next();
+    if(questionIndex == 15){
+      finsish()
+    }
   };
 
   return (
-    <div className={styles["question"]}>
+    <div className={styles['question']}>
       <p>
         <span>
-          <b>{questionIndex}</b>
+          <b>{questionIndex}/15</b>
         </span>
         <br />
         {question}
       </p>
 
-      <div className={styles["choices"]}>
+      <div className={styles['choices']}>
         {options.map((option, index) => {
           return (
             <Choice
               key={index}
               value={option}
-              checked={answer == index}
-              onCheck={() => setAnswer(index)}
+              checked={choice == index}
+              onCheck={() => {
+                setchoice(index);
+              }}
             />
           );
         })}
       </div>
 
-      <div className={styles["action_buttons"]}>
+      <div className={styles['action_buttons']}>
         <Button type="secondary">Leave</Button>
-        <Button onClick={handleNextQuestion} disabled={answer == null}>
-          Next
+        <Button
+          onClick={handleNext}
+          disabled={choice == null}
+        >
+          {questionIndex < 15 ? 'Next' : 'Finish'}
         </Button>
       </div>
     </div>

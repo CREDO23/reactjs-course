@@ -1,4 +1,5 @@
-export const questions = [
+export const questions
+ = [
   {
     question: "What is ReactJS primarily used for?",
     options: [
