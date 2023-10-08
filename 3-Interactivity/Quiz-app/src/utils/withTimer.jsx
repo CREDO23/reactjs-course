@@ -24,7 +24,7 @@ export default function WithTimer(QuestionComponent) {
     }
 
     return (
-      <QuestionComponent {...props} clearTime={clearTime} time={time} />
+      <QuestionComponent {...props} onClearTime={clearTime} time={time} />
     );
   };
 }

@@ -6,8 +6,8 @@ export default function Result({
   userInfo,
   score,
   message,
-  handleViewState,
-  resetQuizState,
+  setView,
+  resetStates,
 }) {
   return (
     <div className={styles['result']}>
@@ -36,8 +36,8 @@ export default function Result({
       <div className={styles['action_buttons']}>
         <Button
           onClick={() => {
-            resetQuizState();
-            handleViewState('collectUserInfo');
+            resetStates();
+            setView('collectUserInfo');
           }}
         >
           Home
