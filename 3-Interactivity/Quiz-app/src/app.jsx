@@ -73,6 +73,43 @@ export default function QuizApp() {
   };
 
   /**
+   * When the user clicks on the LEAVE button, we need to 
+   * handler its results, leave the quiz section and 
+   * dispaly its current score over 15
+   */
+  const handleLeaveQuiz = () => {
+    handleFinishQuiz()
+  }
+
+  /**
+   * At the 15th questin we need to finish showing question
+   *  and go to the result screen.
+   */
+  const handleFinishQuiz = () => {
+    handleUserResult();
+    handleViewState('result');
+  };
+
+  /**
+   * Reset the all states when the user go back home.
+   */
+  const resetStates = () => {
+    setQuizState({
+      currentIndex: 0,
+      questions,
+      correctAnswer: questions[0].correctAnswer,
+      userAnswer: null,
+      result: 0,
+    });
+
+    setUserInfo({
+      email : '',
+      fullName : '',
+    })
+  };
+
+
+  /**
    * Handle the navigation between screens
    */
   const handleViewState = state => {
@@ -89,34 +126,13 @@ export default function QuizApp() {
     });
   };
 
-  /**
-   * At the 15th questin we need to finish showing question
-   *  and go to the result screen.
-   */
-  const handleFinishQuiz = () => {
-    handleUserResult();
-    handleViewState('result');
-  };
-
-  /**
-   * Reset the quiz state when the user go back home.
-   */
-  const resetQuizState = () => {
-    setQuizState({
-      currentIndex: 0,
-      questions,
-      correctAnswer: questions[0].correctAnswer,
-      userAnswer: null,
-      result: 0,
-    });
-  };
-
   return (
     <section id="app">
       {viewState == 'collectUserInfo' && (
         <Home
+          userInfo={userInfo}
           handleUserForm={handleUserInfoForm}
-          handleViewState={handleViewState}
+          setView={handleViewState}
         />
       )}
 
@@ -124,8 +140,9 @@ export default function QuizApp() {
         <Question
           {...quizState.questions[quizState.currentIndex]}
           questionIndex={quizState.currentIndex + 1}
-          next={handleNextQuestion}
-          finsish={handleFinishQuiz}
+          onNext={handleNextQuestion}
+          onFinish={handleFinishQuiz}
+          onLeave={handleLeaveQuiz}
           setUserChoice={handleUserAnswer}
         />
       )}
@@ -135,8 +152,8 @@ export default function QuizApp() {
           userInfo={userInfo}
           message={quizState.result > 7 ? 'Great Job!' : 'You can do better!'}
           score={quizState.result}
-          handleViewState={handleViewState}
-          resetQuizState={resetQuizState}
+          setView={handleViewState}
+          resetStates={resetStates}
         />
       )}
     </section>

@@ -8,23 +8,31 @@ function Question({
   question,
   options,
   questionIndex,
-  next,
+  onNext,
+  onFinish,
+  onLeave,
   setUserChoice,
-  finsish,
   time,
-  clearTime,
+  onClearTime,
 }) {
   const [choice, setchoice] = useState(null);
 
   const handleNext = () => {
     setUserChoice(choice);
     setchoice(null); // reset the choice, we will learn more in the next post #4
-    clearTime();
-    next();
+    onClearTime();
+    onNext();
     if (questionIndex == 15) {
-      finsish();
+      onFinish();
     }
   };
+
+  const handleLeave = () => {
+    setUserChoice(choice);
+    setchoice(null); // reset the choice, we will learn more in the next post #4
+    onClearTime();
+    onLeave()
+  }
 
 
   /**
@@ -39,7 +47,7 @@ function Question({
   useEffect(() => {
     if (time == 15) {
       handleNext();
-      clearTime();
+      onClearTime();
     }
   },[time]);
 
@@ -72,7 +80,7 @@ function Question({
       </div>
 
       <div className={styles['action_buttons']}>
-        <Button type="secondary">Leave</Button>
+        <Button onClick={handleLeave} type="secondary">Leave</Button>
         <Button onClick={handleNext} disabled={choice == null}>
           {questionIndex < 15 ? 'Next' : 'Finish'}
         </Button>
