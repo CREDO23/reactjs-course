@@ -3,21 +3,23 @@ import { useState, useEffect } from 'react';
 export default function WithTimer(QuestionComponent) {
   return function QuestionWithTimer(props) {
     const [time, setTime] = useState(0);
-    let interval;
+    let timerId;
 
+    /**
+     * Here, useEffect allows to only start the timer interval for the
+     * first time this component is rendered and not for each render.
+     * 
+     * We will learn more in the next post
+     */
     useEffect(() => {
-      interval = setInterval(() => {
+      timerId = setInterval(() => {
         setTime((prevT) => prevT + 1);
       }, 500);
 
-      return () => {
-        clearInterval(interval)
-        setTime(0)
-      } ;
     }, []);
 
     const clearTime = () => {
-        clearInterval(interval)
+        clearInterval(timerId)
         setTime(0)
     }
 

@@ -1,7 +1,7 @@
 import styles from '../../styles/components/question/index.module.css';
 import Button from '../shared/button';
 import Choice from './choice';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import WithTimer from '../../utils/withTimer';
 
 function Question({
@@ -27,15 +27,26 @@ function Question({
   };
 
 
-  if (time == 15) {
-    handleNext();
-    clearTime();
-  }
+  /**
+   * Here, useEffect allows us to check the time once
+   * the Question component is rendered and not when rendering. 
+   * 
+   * The time variable passed as dependacies to allows to 
+   * re-run it only if `time` has been changed.
+   * 
+   * We will learn more in the next post #4
+   */
+  useEffect(() => {
+    if (time == 15) {
+      handleNext();
+      clearTime();
+    }
+  },[time]);
 
   return (
     <div className={styles['question']}>
-      <div className={styles["timer"]}>
-          <span>{ 15 - time}</span>
+      <div className={styles['timer']}>
+        <span>{15 - time}</span>
       </div>
       <p>
         <span>
